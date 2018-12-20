@@ -96,4 +96,51 @@
   }
 }
 
+//What we do
+
+.what-we-do {
+  @include respond-to('extra-small') {
+    padding: 50px 0;
+    .wrapper:nth-child(2n) {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__item {
+      margin-top: 85px;
+    }
+    &__content {
+      max-width: 413px;
+      margin-left: 20px;
+    }
+    &__title {
+      color: $dark-color;
+      font-family: $main-font;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+    &__description {
+      color: $subtitle-color;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 300;
+    }
+    .main-btn {
+      margin: 50px auto 0;
+    }
+  }
+  @include respond-to('huge') {
+    padding: 100px 0;
+    &__content {
+      margin-left: 30px;
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__description {
+      font-size: 18px;
+    }
+  }
+}
+
 

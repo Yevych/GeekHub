@@ -23,3 +23,17 @@ img {
 .navbar-toggler:not(:disabled):not(.disabled) {
   outline: none;
 }
+
+@include respond-to('extra-small') {
+  .section-header h2 {
+    color: $dark-color;
+    font-family: $main-font;
+    font-size: 38px;
+    font-weight: 700;
+  }
+  @include respond-to('huge') {
+    .section-header h2 {
+      font-size: 48px;
+    }
+  }
+}
