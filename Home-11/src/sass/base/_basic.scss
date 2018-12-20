@@ -1,0 +1,25 @@
+h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@include respond-to('huge') {
+  .container {
+    max-width: 1323px;
+  }
+}
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+  outline: none;
+}

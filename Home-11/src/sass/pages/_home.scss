@@ -1,0 +1,99 @@
+//Main banner
+
+.inner-content {
+  @include respond-to('extra-small') {
+    margin-top: 70px;
+    &__title {
+      color: $dark-color;
+      font-family: $main-font;
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    &__subtitle {
+      color: $subtitle-color;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 60px;
+    }
+    & .main-btn {
+      margin-bottom: 170px;
+    }
+    .mouse {
+      color: $light-color;
+      font-family: $main-font;
+      font-size: 14px;
+      font-weight: 300;
+      img {
+        display: block;
+        margin: 0 auto 15px;
+      }
+    }
+  }
+  @include respond-to('huge') {
+    margin-top: 170px;
+    &__title {
+      font-size: 48px;
+    }
+    &__subtitle {
+      font-size: 18px;
+    }
+    & .main-btn {
+      margin-bottom: 420px;
+    }
+  }
+}
+
+//Offers
+
+.offer {
+  color: $light-color;
+  @include respond-to('extra-small') {
+    &-content {
+      max-width: 571px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    &__design, &__code {
+      background: url("../img/offer-design.png") no-repeat;
+      background-size: cover;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+    &__code {
+      background: url("../img/offer-code.png") no-repeat;
+      background-size: cover;
+    }
+    &__title {
+      font-family: $main-font;
+      font-size: 38px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      &__accent {
+        font-weight: 700;
+      }
+    }
+    &__description {
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+  }
+  @include respond-to('huge') {
+    &__design, &__code {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+    &__title {
+      font-size: 48px;
+    }
+    &__description {
+      font-size: 18px;
+    }
+  }
+}
+
+
