@@ -200,4 +200,21 @@
   }
 }
 
+//Map
+
+.map {
+  @include respond-to('extra-small') {
+    iframe {
+      width: 100%;
+      height: 407px;
+      border: none;
+    }
+  }
+  @include respond-to('huge') {
+    iframe {
+      height: 607px;
+    }
+  }
+}
+
 
