@@ -30,10 +30,13 @@ img {
     font-family: $main-font;
     font-size: 38px;
     font-weight: 700;
-  }
-  @include respond-to('huge') {
-    .section-header h2 {
-      font-size: 48px;
+    &.light {
+      color: $light-color;
     }
+  }
+}
+@include respond-to('huge') {
+  .section-header h2 {
+    font-size: 48px;
   }
 }

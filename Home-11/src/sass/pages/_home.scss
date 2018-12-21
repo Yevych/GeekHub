@@ -143,4 +143,61 @@
   }
 }
 
+//About us
+
+.about {
+  @include respond-to('extra-small') {
+    padding: 50px 0;
+    background: url("../img/about-us/about-bg.png") no-repeat center center;
+    background-size: cover;
+    &__description {
+      color: $subtitle-color;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 300;
+      margin-top: 40px;
+    }
+    &-item {
+      margin-top: 80px;
+      &__name {
+        color: $light-color;
+        font-family: $add-font;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 15px 0;
+      }
+      .about__description {
+        margin: 0 auto;
+        max-width: 245px;
+        width: 100%;
+      }
+    }
+    .main-btn {
+      margin: 80px auto 0;
+    }
+  }
+  @include respond-to('medium') {
+    &__description {
+      max-width: 699px;
+      margin: 40px auto 0;
+    }
+  }
+  @include respond-to('huge') {
+    padding: 115px 0;
+    &__description {
+      font-size: 18px;
+    }
+    &-item {
+      margin-top: 130px;
+      &__name {
+        font-size: 24px;
+        margin: 30px 0;
+      }
+    }
+    .main-btn {
+      margin: 110px auto 0;
+    }
+  }
+}
+
 
