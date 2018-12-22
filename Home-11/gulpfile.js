@@ -58,11 +58,16 @@ gulp.task('images', function () {
     .pipe(gulp.dest('./assets/img'))
 })
 
+gulp.task('slick', function () {
+  return gulp.src('./src/slick/**/*')
+    .pipe(gulp.dest('./assets/slick'))
+})
+
 gulp.task('watch', ['styles', 'js'], function () {
   gulp.watch('./src/sass/**/*.scss', ['styles'])
   gulp.watch('./src/js/**/*.js', ['js'])
 })
 
-gulp.task('default', ['styles', 'lib-js', 'js', 'images'], function () {
+gulp.task('default', ['styles', 'lib-js', 'js', 'images', 'slick'], function () {
 
 })
