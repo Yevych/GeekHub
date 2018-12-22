@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-<div class="main">
+<div class="main" id="home">
     <header>
         <div class="container">
             <div class="row">
@@ -32,19 +32,19 @@
                         <div class="collapse navbar-collapse header-navbar__menu" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link nav-item__link" href="#">Home</a>
+                                    <a class="nav-link nav-item__link" href="#home">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link nav-item__link" href="#">About us</a>
+                                    <a class="nav-link nav-item__link" href="#about">About us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link nav-item__link" href="#">Offer</a>
+                                    <a class="nav-link nav-item__link" href="#offer">Offer</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link nav-item__link" href="#">Portfolio</a>
+                                    <a class="nav-link nav-item__link" href="#portfolio">Portfolio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link nav-item__link button" href="#">Contact</a>
+                                    <a class="nav-link nav-item__link button" href="#contact">Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -69,7 +69,7 @@
         </div>
     </div>
 </div>
-<section class="offer">
+<section class="offer" id="offer">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-lg-6 offer__design">
@@ -163,7 +163,7 @@
         </div>
     </div>
 </section>
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
     <div class="portfolio__slider d-flex">
         <div class="portfolio__slider__slide">
             <img src="assets/img/portfolio/drone-zone.png" alt="drone zone">
@@ -233,7 +233,7 @@
         </div>
     </div>
 </section>
-<section class="about">
+<section class="about" id="about">
     <div class="container">
         <div class="section-header text-center">
             <h2 class="light">About us!</h2>
@@ -273,13 +273,13 @@
         </div>
     </div>
 </section>
-<section class="location-map">
+<div class="location-map" id="contact">
     <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3059445135!2d-74.25986613799748!3d40.69714941774136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1545407628631"
                 allowfullscreen>
         </iframe>
     </div>
-</section>
+</div>
 <footer>
     <div class="container">
         <div class="row">
@@ -295,7 +295,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- slick-slider -->
-<script type="text/javascript" src="assets/slick/slick.min.js"></script>
+<script src="assets/slick/slick.min.js"></script>
 <script>
   $('.portfolio__slider').slick({
     dots: false,
