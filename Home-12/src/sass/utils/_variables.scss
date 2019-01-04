@@ -1,0 +1,13 @@
+$breakpoints: (
+  'extra-small': (min-width: 320px),
+  'medium-min': (min-width: 800px),
+  'large-min': (min-width: 1024px),
+  'large-max': (max-width: 1024px),
+  'huge': (min-width: 1200px),
+  'large-huge': (min-width: 1025px) and (max-width: 1200px),
+);
+
+$btn-color: #707070;
+$light-btn-color: #f3f3f3;
+$btn-color-hover: #fff6eb;
+$text: #585858;

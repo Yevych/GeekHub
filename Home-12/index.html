@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS - Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div class="container text-center">
+    <h1>Calculator</h1>
+    <section class="arithmetic">
+        <h2>Arithmetic Operations</h2>
+        <p>
+            <label for="first-number">First number:</label>
+            <input type="text" id="first-number">
+        </p>
+        <p>
+            <label for="second-number">Second number:</label>
+            <input type="text" id="second-number">
+        </p>
+        <button onclick="add()">Add</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <p id="arithmetic-output">Result:</p>
+    </section>
+    <hr>
+    <section class="trigonometry">
+        <h2>Trigonometry Operations</h2>
+        <p>
+            <label for="number-cos">Input the cosine value:</label>
+            <input type="text" id="number-cos">
+        </p>
+        <p>
+            <label for="number-sin">Input the sine value:</label>
+            <input type="text" id="number-sin">
+        </p>
+        <button onclick="trygonometryCos()">Cos</button>
+        <button onclick="trygonometrySin()">Sin</button>
+        <p id="trigonometry-output">Result:</p>
+    </section>
+    <hr>
+    <section class="combinatorics">
+        <h2>Combinatorics Operations</h2>
+        <p>
+            <label for="number-sqrt">Count the root of a number:</label>
+            <input type="text" id="number-sqrt">
+        </p>
+        <p>
+            <label for="number-factorial">Factorial numbers:</label>
+            <input type="text" id="number-factorial">
+        </p>
+        <button onclick="root()">Root</button>
+        <button onclick="factorial()">Factorial</button>
+        <p id="combinatorics-output">Result:</p>
+        <h3>Raising a number to a power</h3>
+        <p>
+            <label for="number-raised">Number that is raised to a power:</label>
+            <input type="text" id="number-raised">
+        </p>
+        <p>
+            <label for="number-power">Power:</label>
+            <input type="text" id="number-power">
+        </p>
+        <button onclick="power()">Power</button>
+        <p id="power-output">Result:</p>
+    </section>
+</div>
+
+<script src="assets/js/libs.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
