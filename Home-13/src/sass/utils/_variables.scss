@@ -1,6 +1,15 @@
 $breakpoints: (
-  'medium-min': (min-width: 800px),
+  'extra-small': (min-width: 320px),
+  'medium-min': (min-width: 768px),
+  'large-min': (min-width: 1024px),
   'large-max': (max-width: 1024px),
   'huge': (min-width: 1200px),
   'large-huge': (min-width: 1025px) and (max-width: 1200px),
 );
+
+//Color
+
+$light-color: #fff;
+$dark-color: #000;
+$edit-color: #eaeaea;
+$success-color: #00ff00;

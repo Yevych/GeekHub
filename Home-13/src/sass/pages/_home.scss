@@ -1,3 +1,76 @@
+li {
+  position: relative;
+  outline: none;
+  .item {
+    display: inline-block;
+    font-weight: 600;
+  }
+}
 
+.completed {
+  .item {
+    color: $success-color;
+  }
+}
+
+.add-items {
+  @include respond-to('extra-small') {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    .form-control {
+      border: 2px solid $dark-color;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .add {
+      padding: 5px 0;
+      background-color: $dark-color;
+      color: $light-color;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+  @include respond-to('medium-min') {
+    flex-direction: row;
+    .form-control {
+      flex-basis: 70%;
+    }
+    .add {
+      flex-basis: 30%;
+    }
+  }
+}
+
+.remove {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.save {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $dark-color;
+  cursor: pointer;
+}
+
+.edit {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $dark-color;
+  cursor: pointer;
+}
+
+.editable {
+  background-color: $edit-color;
+}
 
 

@@ -1,0 +1,25 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    padding-right: 70px;
+    margin-top: 20px;
+  }
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+input.checkbox {
+  margin-right: 10px;
+}
+
+.wrapper {
+  max-width: 800px;
+}
