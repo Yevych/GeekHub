@@ -11,10 +11,10 @@ function multiply (a, b) {
 }
 
 function divade (a, b) {
-  return a / b
   if (b === 0) {
     return false
   }
+  return a / b
 }
 
 function cos (x) {
@@ -26,17 +26,17 @@ function sin (x) {
 }
 
 function sqrt (x) {
-  return Math.sqrt(x)
   if (x < 0) {
     return false
   }
+  return Math.sqrt(x)
 }
 
 function factorial (n) {
-  return n ? n * factorial(n - 1) : 1
   if (n < 0) {
     return false
   }
+  return n ? n * factorial(n - 1) : 1
 }
 
 function power (x, n) {
