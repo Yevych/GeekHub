@@ -1,0 +1,345 @@
+//Main banner
+
+.inner-content {
+  @include respond-to('extra-small') {
+    margin-top: 70px;
+    &__title {
+      color: $dark-color;
+      font-family: $main-font;
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    &__subtitle {
+      color: $subtitle-color;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 60px;
+    }
+    & .main-btn {
+      margin-bottom: 170px;
+    }
+    .mouse {
+      color: $light-color;
+      font-family: $main-font;
+      font-size: 14px;
+      font-weight: 300;
+      img {
+        display: block;
+        margin: 0 auto 15px;
+      }
+    }
+  }
+  @include respond-to('huge') {
+    margin-top: 170px;
+    &__title {
+      font-size: 48px;
+    }
+    &__subtitle {
+      font-size: 18px;
+    }
+    & .main-btn {
+      margin-bottom: 420px;
+    }
+  }
+}
+
+//Offers
+
+.offer {
+  color: $light-color;
+  @include respond-to('extra-small') {
+    &-content {
+      max-width: 571px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    &__design, &__code {
+      background: url("../img/offer-design.png") no-repeat;
+      background-size: cover;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+    &__code {
+      background: url("../img/offer-code.png") no-repeat;
+      background-size: cover;
+    }
+    &__title {
+      font-family: $main-font;
+      font-size: 38px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      &__accent {
+        font-weight: 700;
+      }
+    }
+    &__description {
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+  }
+  @include respond-to('huge') {
+    &__design, &__code {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+    &__title {
+      font-size: 48px;
+    }
+    &__description {
+      font-size: 18px;
+    }
+  }
+}
+
+//What we do
+
+.what-we-do {
+  @include respond-to('extra-small') {
+    padding: 50px 0;
+    .wrapper:nth-child(2n) {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__item {
+      margin-top: 85px;
+    }
+    &__content {
+      max-width: 413px;
+      margin-left: 20px;
+    }
+    &__title {
+      color: $dark-color;
+      font-family: $main-font;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+    &__description {
+      color: $subtitle-color;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 300;
+    }
+    .main-btn {
+      margin: 50px auto 0;
+    }
+  }
+  @include respond-to('huge') {
+    padding: 100px 0;
+    &__content {
+      margin-left: 30px;
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__description {
+      font-size: 18px;
+    }
+  }
+}
+
+//Portfolio
+
+.portfolio {
+  @include respond-to('extra-small') {
+    button {
+      outline: none;
+    }
+    &__slider {
+      position: relative;
+      &__btn {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 38px;
+        height: 38px;
+        background: $light-color;
+        border: none;
+        cursor: pointer;
+      }
+      &__prev-btn {
+        left: 0;
+        .left-arrow {
+          display: block;
+          width: 10px;
+          height: 10px;
+          margin: 0 auto;
+          border-right: 1px solid $dark-color;
+          border-top: 1px solid $dark-color;
+          transform: rotate(-135deg);
+        }
+      }
+      &__next-btn {
+        right: 0;
+        .right-arrow {
+          display: block;
+          width: 10px;
+          height: 10px;
+          margin: 0 auto;
+          border-right: 1px solid $dark-color;
+          border-top: 1px solid $dark-color;
+          transform: rotate(45deg);
+        }
+      }
+      &__slide {
+        position: relative;
+        outline: none;
+        img {
+          width: 100%;
+        }
+        &__overlay {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.63);
+          color: $light-color;
+          padding: 0 43px;
+          opacity: 0;
+          transition: .3s all ease-in;
+          &__title {
+            color: $light-color;
+            font-family: $main-font;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+          }
+          &__subtitle {
+            max-width: 387px;
+            color: $light-color;
+            font-family: $main-font;
+            font-size: 12px;
+            font-weight: 300;
+            margin-bottom: 45px;
+          }
+        }
+        &:hover &__overlay {
+          opacity: 1;
+          transition: .3s all ease-in;
+        }
+        .main-btn {
+          padding: 10px 30px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  @include respond-to('huge') {
+    &__slider {
+      &__btn {
+        width: 58px;
+        height: 58px;
+      }
+      &__prev-btn {
+        .left-arrow {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      &__next-btn {
+        .right-arrow {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      &__slide {
+        &__overlay {
+          padding: 0 63px;
+          &__title {
+            font-size: 30px;
+          }
+          &__subtitle {
+            font-size: 16px;
+            margin-bottom: 65px;
+          }
+        }
+        .main-btn {
+          padding: 12px 53px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+//About us
+
+.about {
+  @include respond-to('extra-small') {
+    padding: 50px 0;
+    background: url("../img/about-us/about-bg.png") no-repeat center center;
+    background-size: cover;
+    &__description {
+      color: $subtitle-color;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 300;
+      margin-top: 40px;
+    }
+    &-item {
+      margin-top: 80px;
+      &__name {
+        color: $light-color;
+        font-family: $add-font;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 15px 0;
+      }
+      .about__description {
+        margin: 0 auto;
+        max-width: 245px;
+        width: 100%;
+      }
+    }
+    .main-btn {
+      margin: 80px auto 0;
+    }
+  }
+  @include respond-to('medium') {
+    &__description {
+      max-width: 699px;
+      margin: 40px auto 0;
+    }
+  }
+  @include respond-to('huge') {
+    padding: 115px 0;
+    &__description {
+      font-size: 18px;
+    }
+    &-item {
+      margin-top: 130px;
+      &__name {
+        font-size: 24px;
+        margin: 30px 0;
+      }
+    }
+    .main-btn {
+      margin: 110px auto 0;
+    }
+  }
+}
+
+//Map
+
+.map {
+  @include respond-to('extra-small') {
+    iframe {
+      width: 100%;
+      height: 407px;
+      border: none;
+    }
+  }
+  @include respond-to('huge') {
+    iframe {
+      height: 607px;
+    }
+  }
+}
+
+

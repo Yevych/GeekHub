@@ -1,0 +1,25 @@
+footer {
+  @include respond-to('extra-small') {
+    padding: 40px 0 32px;
+    .footer-content {
+      color: $footer-text-color;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 300;
+      a {
+        color: $footer-text-color;
+        font-weight: 700;
+        &:hover {
+          color: lighten($footer-text-color,10%);
+          transition: .3s all;
+        }
+      }
+    }
+  }
+  @include respond-to('huge') {
+    padding: 70px 0 54px;
+    .footer-content {
+      font-size: 18px;
+    }
+  }
+}
