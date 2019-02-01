@@ -1,0 +1,56 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  margin-top: 15px;
+}
+
+button {
+  margin-top: 20px;
+  background-color: $btn-color;
+  border: none;
+  &:hover {
+    background-color: lighten($btn-color, 5%);
+  }
+  a {
+    color: $light-color;
+    &:hover {
+      color: $light-color;
+      text-decoration: none;
+    }
+  }
+}
+
+form {
+  max-width: 300px;
+  margin: 30px auto 0;
+}
+
+label {
+  display: block;
+}
+
+input {
+  padding: 5px 15px;
+  max-width: 300px;
+  margin-bottom: 10px;
+  width: 100%;
+  #password_repeat {
+    margin-bottom: 0;
+  }
+  &[type=submit] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0092de;
+    color: $light-color;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      background-color: lighten($btn-color, 5%);
+    }
+  }
+}
