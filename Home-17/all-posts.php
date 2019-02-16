@@ -17,7 +17,7 @@
     <?php
     require "database.php";
 
-    $sql = "SELECT * FROM posts ORDER BY id DESC LIMIT 7";
+    $sql = "SELECT * FROM posts ORDER BY id DESC";
     $result = $conn->query($sql);
     ?>
     <ul class="all-posts">

@@ -24,7 +24,7 @@ require "authorization.php";
             </li>
             <li>
                 <label for="author">Author:</label>
-                <input type="text" name="author" id="author" value="<?php echo $_SESSION["user_name"]; ?>" required>
+                <input type="text" name="author" id="author" value="<?php echo $_SESSION["user_name"]; ?>" required disabled>
             </li>
             <li>
                 <input type="hidden" name="date" value="<?php echo date('Y-m-d'); ?>">
