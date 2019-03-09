@@ -1,0 +1,587 @@
+//Main banner
+
+.slide {
+  @include respond-to('extra-small') {
+    &__content {
+      text-align: center;
+      padding: 50px 0;
+      border-bottom: 3px solid #d3d3d3;
+      box-sizing: border-box;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        width: 70%;
+        height: 3px;
+        background-color: $theme-color;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin-bottom: -3px;
+      }
+    }
+    h1 {
+      padding-bottom: 50px;
+      color: $theme-color;
+      font-family: $maintitle-font;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 0.5;
+      text-transform: uppercase;
+      span {
+        color: $main-dark-color;
+        font-family: $subtitle-font;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 160px;
+        text-transform: capitalize;
+      }
+    }
+  }
+  @include respond-to('small') {
+    h1 {
+      font-size: 80px;
+      span {
+        font-size: 50px;
+      }
+    }
+  }
+  @include respond-to('large') {
+    &__content {
+      padding: 208px 0 174px;
+    }
+    h1 {
+      padding-bottom: 90px;
+      font-size: 116px;
+      span {
+        font-size: 80px;
+      }
+    }
+  }
+}
+
+//Introducing
+
+.introducing {
+  @include respond-to('extra-small') {
+    padding: 50px 0;
+    border-bottom: 1px solid #dfdfdf;
+    &-items {
+      margin: 55px -15px 0 -15px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+    &-item {
+      position: relative;
+      margin: 15px 15px 0 15px;
+      outline: none;
+    }
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    .member {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      overflow: hidden;
+      background-color: $theme-color;
+      transition: .3s all ease;
+      & .social-list {
+        display: flex;
+        padding: 0 30px 15px;
+        & li {
+          margin-right: 15px;
+          .social-icon {
+            color: $main-light-color;
+            font-size: 24px;
+          }
+          a {
+            display: block;
+            outline: none;
+          }
+        }
+        span {
+          color: $main-light-color;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          margin-left: 10px;
+        }
+      }
+      &__name {
+        margin: 0;
+        padding: 18px 30px;
+        color: $main-light-color;
+        font-family: $maintitle-font;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 1.1;
+      }
+      &__position {
+        font-family: $text-font;
+        font-size: 16px;
+      }
+    }
+  }
+  @include respond-to('medium-small') {
+    &-items {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+    &-item {
+      width: 50%;
+    }
+  }
+
+  @include respond-to('small') {
+    &-item {
+      width: 33%;
+    }
+  }
+
+  @include respond-to('medium') {
+    &-item {
+      &:hover .member {
+        height: 130px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: .5s all ease;
+      }
+    }
+  }
+
+  @include respond-to('large') {
+    padding: 100px 0;
+  }
+}
+
+// Event
+
+.event {
+  @include respond-to('extra-small') {
+    padding: 50px 0;
+    .upcoming-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .left-part {
+        flex-basis: 65%;
+      }
+      .right-part {
+        max-width: 372px;
+
+        @include respond-to('medium-small') {
+          margin: 0 auto;
+        }
+
+        @include respond-to('large') {
+          margin: 0;
+        }
+      }
+    }
+    .concert-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 50px;
+      padding-bottom: 5px;
+      border-bottom: 4px solid #e9e9e9;
+      position: relative;
+      &:after {
+        content: '';
+        width: 20%;
+        height: 4px;
+        background-color: #df001f;
+        position: absolute;
+        left: 22px;
+        bottom: 0;
+        margin: -4px;
+      }
+    }
+    .ticket {
+      display: inline-block;
+      position: relative;
+      img {
+        min-width: 270px;
+        width: 100%;
+      }
+      &__date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        padding-top: 100px;
+        color: $main-light-color;
+        font-family: $maintitle-font;
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        strong {
+          display: block;
+          font-size: 45px;
+        }
+      }
+      &-description {
+        color: $main-dark-color;
+        margin: 30px 0;
+        h3 {
+          font-family: $maintitle-font;
+          font-size: 22px;
+          font-weight: 500;
+          margin-bottom: 30px;
+        }
+        table {
+          font-family: $text-font;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.8;
+          margin-bottom: 30px;
+          span {
+            float: right;
+            padding-left: 5px;
+          }
+          td:nth-of-type(even) {
+            padding-left: 15px;
+          }
+        }
+      }
+    }
+    .videos {
+      margin-top: 30px;
+      .video-slider {
+        margin-top: 40px;
+      }
+      .video-frame {
+        text-align: center;
+      }
+      iframe {
+        max-width: 372px;
+        width: 100%;
+        height: 290px;
+        margin-top: 10px;
+      }
+    }
+  }
+  @include respond-to('small') {
+    .concert-wrapper {
+      flex-direction: row;
+    }
+    .ticket {
+      &-description {
+        margin: 0 0 0 80px;
+      }
+    }
+    .videos {
+      .section-header {
+        text-align: center;
+      }
+      .video-frame {
+        text-align: right;
+      }
+    }
+  }
+  @include respond-to('large') {
+    padding: 100px 0;
+    .upcoming-flex {
+      flex-direction: row;
+    }
+    .videos {
+      margin-top: 0;
+      .section-header {
+        text-align: left;
+      }
+      iframe {
+        width: 372px;
+      }
+    }
+  }
+}
+
+//History
+
+.history {
+  @include respond-to('extra-small') {
+    padding: 50px 30px;
+    background: $main-dark-color;
+    & .main-btn-light {
+      display: inline-block;
+    }
+    &__text {
+      color: $main-light-color;
+      font-family: $maintitle-font;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+    }
+    &__subtitle {
+      display: block;
+      margin: 15px 0 20px 0;
+      font-size: 17px;
+      font-family: $text-font;
+      text-transform: lowercase;
+      p {
+        margin: 0;
+      }
+      em {
+        font-family: $subtitle-font;
+        font-size: 35px;
+        font-weight: 400;
+        font-style: normal;
+      }
+    }
+  }
+  @include respond-to('max-small') {
+    background-image: none !important;
+  }
+  @include respond-to('small') {
+    &__content {
+      max-width: 556px;
+    }
+    &__text {
+      font-size: 32px;
+    }
+    &__subtitle {
+      font-size: 22px;
+    }
+  }
+  @include respond-to('large') {
+    padding: 73px 100px;
+    &__subtitle {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+//Popular
+
+.popular {
+  @include respond-to('extra-small') {
+    padding: 50px 0 20px;
+    &-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .player {
+        margin-top: 30px;
+        iframe {
+          margin-bottom: 30px;
+        }
+      }
+      .left-part {
+        flex-basis: 65%;
+      }
+      .right-part {
+        flex-basis: 35%;
+        .insta-post {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 15px -15px 0;
+          img {
+            vertical-align: middle;
+          }
+          a {
+            vertical-align: middle;
+          }
+        }
+      }
+      .songs-list {
+        list-style: decimal-leading-zero;
+        list-style-position: inside;
+        -moz-column-count: 1; /* Firefox */
+        -webkit-column-count: 1; /* Safari and Chrome */
+        column-count: 1;
+        margin-bottom: 30px;
+        li {
+          max-width: 200px;
+          border-bottom: 1px solid #ebebeb;
+          color: $main-dark-color;
+          font-family: $text-font;
+          font-size: 16px;
+          font-weight: 400;
+          padding: 10px 0 15px;
+          a {
+            color: $main-dark-color;
+          }
+        }
+      }
+    }
+  }
+  @include respond-to('small') {
+    .songs-list {
+      -moz-column-count: 3; /* Firefox */
+      -webkit-column-count: 3; /* Safari and Chrome */
+      column-count: 3;
+    }
+    .right-part {
+      .insta-post {
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+    }
+  }
+  @include respond-to('large') {
+    padding: 100px 0 70px;
+    &-flex {
+      flex-direction: row;
+      .right-part {
+        margin-left: 30px;
+        .insta-post {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          margin: 7.5px -21px 0;
+        }
+      }
+    }
+  }
+}
+
+//Download
+
+.download {
+  @include respond-to('extra-small') {
+    position: relative;
+    padding: 40px 0 60px;
+    text-align: center;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background-color: #000;
+    }
+    .header {
+      position: relative;
+      z-index: 2;
+      color: $main-light-color;
+      font-family: $maintitle-font;
+      font-size: 22px;
+      font-weight: 500;
+      &__title {
+        position: relative;
+        z-index: 2;
+        color: $main-light-color;
+        font-family: $text-font;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 1px;
+        margin: 10px 0 0;
+        padding: 0 15px;
+      }
+    }
+    .apps {
+      position: relative;
+      z-index: 2;
+      margin-top: 20px;
+      a {
+        display: block;
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:hover {
+          opacity: .9;
+        }
+        img {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  @include respond-to('small') {
+    .header {
+      font-size: 32px;
+      &__title {
+        font-size: 22px;
+      }
+    }
+    .apps {
+      margin-top: 40px;
+      a {
+        display: inline-block;
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  @include respond-to('medium') {
+    .header {
+      &__title {
+        padding: 0;
+      }
+    }
+  }
+  @include respond-to('large') {
+    padding: 80px 0 120px;
+  }
+}
+
+//Newsletter
+
+.newsletter {
+  @include respond-to('extra-small') {
+    padding: 70px 0;
+    text-align: center;
+    form {
+      max-width: 530px;
+      margin: 0 auto;
+    }
+    &-field {
+      position: relative;
+    }
+    input[type="email"], input[type="text"] {
+      position: relative;
+      max-width: 530px;
+      width: 100%;
+      padding-bottom: 10px;
+      padding-right: 25px;
+      border: none;
+      border-bottom: 4px solid $line-newsletter-color;
+      color: $placeholder-newsletter-color;
+      font-family: $text-font;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      outline: none;
+    }
+    &__btn {
+      color: $theme-color;
+      font-size: 14px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+  @include respond-to('small') {
+    padding: 100px 0 70px;
+    input[type="email"], input[type="text"] {
+      font-size: 16px;
+    }
+  }
+}

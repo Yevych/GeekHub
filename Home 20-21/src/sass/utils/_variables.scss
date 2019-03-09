@@ -1,0 +1,26 @@
+//Typography
+
+$maintitle-font: 'Oswald', sans-serif;
+$subtitle-font: 'Great Vibes', cursive, san-serif;
+$text-font: 'Open Sans', sans-serif;
+
+//Color
+
+$theme-color: #df001f;
+$main-light-color: #ffffff;
+$main-dark-color: #333333;
+$placeholder-newsletter-color: #282828;
+$line-newsletter-color: #999999;
+
+//Breakpoints
+
+$breakpoints: (
+  'extra-small': (min-width: 320px),
+  'medium-small': (min-width: 480px),
+  'small': (min-width: 768px),
+  'max-small': (max-width: 768px),
+  'medium': (min-width: 992px),
+  'max-medium': (max-width: 992px),
+  'large': (min-width: 1200px),
+  'max-large': (max-width: 1280px),
+);

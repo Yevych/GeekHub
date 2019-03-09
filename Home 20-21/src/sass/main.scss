@@ -1,0 +1,14 @@
+@import "normalize/import-now";
+
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import 'base/basic';
+
+@import 'components/buttons';
+@import 'components/instagram';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'pages/home';

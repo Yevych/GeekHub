@@ -1,0 +1,64 @@
+footer {
+  @include respond-to('extra-small') {
+    border-top: 1px solid #d2d2d2;
+    padding: 70px 0;
+    text-align: center;
+    .footer-nav-list {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+      }
+      & li {
+        display: inline-block;
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      a {
+        color: $main-dark-color;
+        font-family: $text-font;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        &:hover {
+          color: $theme-color;
+          transition: .3s all;
+        }
+      }
+    }
+    .copy {
+      color: $main-dark-color;
+      font-family: $text-font;
+      font-size: 13px;
+      line-height: 1.2;
+      margin: 30px 0 0;
+      span {
+        color: $theme-color;
+        font-family: $subtitle-font;
+        font-size: 28px;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  @include respond-to('small') {
+    .footer-nav-list {
+      ul {
+        flex-direction: row;
+      }
+      & li {
+        margin-left: 45px;
+        margin-bottom: 0;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  @include respond-to('large') {
+    padding: 70px 0 90px;
+  }
+}
