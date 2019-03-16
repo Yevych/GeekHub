@@ -1,0 +1,55 @@
+// Кнопки
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  background: none;
+  outline: 0 none;
+  border: 0 none;
+  border-radius: 0;
+  padding: 8px 25px;
+  background-color: #000;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.post__btn {
+  display: inline-block;
+  padding: 8px 61px;
+  background-color: $btn-bg;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: .2s all;
+
+  &:hover {
+    color: #fff;
+    background-color: lighten($btn-bg, 10%);
+    transition: .2s all;
+  }
+}
+
+.comment-btn {
+  max-height: 35px;
+  display: inline-block;
+  padding: 9px 66px;
+  color: #fff;
+  background-color: #333;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  transition: .2s all;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten(#333, 5%);
+    transition: .2s all;
+  }
+
+  @media (max-width: $screen-md) {
+    margin-top: 20px;
+  }
+}

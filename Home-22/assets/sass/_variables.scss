@@ -1,0 +1,34 @@
+//  Color
+
+$body-bg: #fff;
+$light-bg: #362f2f;
+$dark-bg: #000000;
+$btn-bg: #c3a000;
+$text-color: #fff;
+
+// Link color
+
+$link-color: #55b3f3;
+$link-color--hover: darken($link-color, 20%);
+
+//  Typography
+
+$font-family: 'Roboto Condensed', sans-serif;
+$second-font: 'Open Sans', sans-serif;
+
+$font-size: 14px;
+$font-weight: 400; // Regular
+$line-height: 1.2;
+
+// Width container
+
+$container-padding: 15px;
+$container-width: 1170px + $container-padding * 2;
+
+//  Adaptive
+
+ $screen-xs: 0;
+ $screen-sm: 480px;
+ $screen-md: 768px;
+ $screen-lg: 992px;
+ $screen-xl: 1200px;
