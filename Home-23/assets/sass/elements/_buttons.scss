@@ -63,3 +63,27 @@
     transition: .5s all;
   }
 }
+
+.donate__btn, .get__btn {
+  padding: 16px 49px;
+  color: #ffffff;
+  font-family: $font-family;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-color: $link-color;
+
+  @media (max-width: $screen-sm) {
+    padding: 13px 30px;
+    font-size: 15px;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.get__btn {
+  padding: 16px 40px;
+}
