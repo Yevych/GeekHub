@@ -1,0 +1,249 @@
+//Banner
+
+.banner {
+  background-size: cover;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+//About
+.about {
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $screen-lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    text-align: right;
+  }
+
+  &__img {
+    position: relative;
+    flex-basis: 458px;
+    padding-left: 15px;
+
+    @media (max-width: $screen-lg) {
+      flex-basis: 0;
+      margin: 15px auto 0;
+    }
+  }
+
+  &__description {
+    max-width: 604px;
+    color: #838b8c;
+    font-family: $font-family--domine;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: right;
+
+    @media (max-width: $screen-lg) {
+      margin-left: auto;
+    }
+  }
+
+  .about-us {
+    z-index: 2;
+    background-color: #03b6e7;
+    border: 7px solid #fff;
+    left: 0;
+    margin: auto;
+    padding: 17px 23px;
+    position: absolute;
+    right: 0;
+    top: 164px;
+    width: 52%;
+    box-shadow: 0 0 20px -10px #000;
+
+    @media (max-width: $screen-lg) {
+      top: 100px;
+    }
+
+    @media (max-width: $screen-sm) {
+      width: 75%;
+    }
+
+    .years-block {
+      border: 1px solid #35c5ec;
+      background: url(../images/badge_icon.png) no-repeat center top;
+      padding-top: 116px;
+      text-align: center;
+      padding-bottom: 26px;
+
+      strong {
+        font-size: 75px;
+        display: block;
+        line-height: 1;
+
+        @media (max-width: 320px) {
+          font-size: 55px;
+        }
+      }
+
+      span {
+        font-size: 10px;
+        color: #fff;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+//Steps
+.steps {
+  background-color: #e7eff1;
+
+  &__icon {
+    position: absolute;
+    top: 0;
+
+    @media (max-width: $screen-lg) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__item ol {
+    @include clearlist;
+    counter-reset: list;
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: $screen-lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__item ol li {
+    width: 33.33%;
+    padding: 100px 45px 33px 0;
+    position: relative;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @media (max-width: $screen-lg) {
+      width: 75%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
+
+    &:before {
+      counter-increment: list;
+      content: "0" counter(list);
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 72px;
+      color: #16d428;
+      font-size: 20px;
+      font-weight: 700;
+
+      @media (max-width: $screen-lg) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__title {
+    color: #343a3b;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 33px;
+    text-transform: uppercase;
+
+    @media (max-width: $screen-lg) {
+      font-size: 15px;
+    }
+  }
+}
+
+//Testimonials
+
+.testimonials {
+  background-color: #03b6e7;
+
+  blockquote {
+    position: relative;
+    max-width: 894px;
+    margin: 55px auto;
+    color: #ddf8ff;
+    font-family: $font-family--domine;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -15%;
+      display: block;
+      width: 68px;
+      height: 47px;
+      background: url(../images/icon_quote.png) 50% 50% no-repeat;
+      background-size: cover;
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: -15%;
+      top: 0;
+      display: block;
+      width: 68px;
+      height: 47px;
+      background: url(../images/icon_quote_last.png) 50% 50% no-repeat;
+      background-size: cover;
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+  }
+
+  .author {
+
+    &__wrapper {
+      max-width: 200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+
+    &__position {
+      display: block;
+      color: #ddf8ff;
+      font-family: $font-family--domine;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    &__name {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 33px;
+      text-transform: uppercase;
+    }
+  }
+}
